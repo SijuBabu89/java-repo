@@ -1,0 +1,3 @@
+com/buddywindow/core/service/security/SecurityConfig.class
+com/buddywindow/core/service/filters/AuthTokenFilter.class
+com/buddywindow/core/service/entity/UserProfile.class
