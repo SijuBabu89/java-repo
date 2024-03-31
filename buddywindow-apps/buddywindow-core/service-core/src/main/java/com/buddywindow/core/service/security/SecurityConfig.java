@@ -28,7 +28,7 @@ public class SecurityConfig {
 
 		http.csrf(httpSecurityCsrfConfigurer -> httpSecurityCsrfConfigurer.disable())
 				.authorizeHttpRequests(
-						(requests) -> requests.requestMatchers("/api/auth/welcome-msg")
+						(requests) -> requests.requestMatchers("/api/auth/welcome-msg", "/api/noti/welcome-msg", "/api/noti/send/email")
 								.permitAll().anyRequest().authenticated())
 				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				.headers(httpSecurityHeadersConfigurer -> httpSecurityHeadersConfigurer
