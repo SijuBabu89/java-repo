@@ -1,0 +1,8 @@
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/entity/ErrorResponse.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/exception/AuthenticationFailedException.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/exception/AuthorizationException.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/exception/BaseException.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/exception/PlatformException.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/exception/ResourceNotFoundException.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/core/exception/ValidationException.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/common-core/src/main/java/com/buddywindow/exception/handler/GlobalExceptionHandler.java

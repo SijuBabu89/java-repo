@@ -1,3 +1,6 @@
-/Users/sijubabu/my_space/coder_space/code_repository/java_codebase/buddywindow/buddywindow/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/filters/AuthTokenFilter.java
-/Users/sijubabu/my_space/coder_space/code_repository/java_codebase/buddywindow/buddywindow/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/security/SecurityConfig.java
-/Users/sijubabu/my_space/coder_space/code_repository/java_codebase/buddywindow/buddywindow/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/entity/UserProfile.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/adapter/AuthServiceAdapter.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/adapter/IAuthServiceAdapter.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/entity/UserProfile.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/filters/AuthTokenFilter.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/security/SecurityConfig.java
+/home/siju/workspace/code_base/java-apps/java-repo/buddywindow-apps/buddywindow-core/service-core/src/main/java/com/buddywindow/core/service/utils/HttpUtil.java

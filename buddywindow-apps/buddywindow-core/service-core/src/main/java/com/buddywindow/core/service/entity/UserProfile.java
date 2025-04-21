@@ -1,6 +1,8 @@
 package com.buddywindow.core.service.entity;
 
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,5 +19,7 @@ public class UserProfile {
     private String firstName;
     private String middleName;
     private String lastName;
+	private String role;
+	private List<String> rights;
 
 }

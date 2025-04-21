@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.4.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.buddywindow</groupId>
@@ -19,7 +19,7 @@
 		<core-application.version>0.0.1-SNAPSHOT</core-application.version>
 	</properties>
 	<dependencies>
-			<dependency>
+		<dependency>
 			<groupId>com.buddywindow</groupId>
 			<artifactId>service-core</artifactId>
 			<version>${core-application.version}</version>
@@ -47,8 +47,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
 		</plugins>
+		<finalName>buddywindow-auth-service</finalName>
 	</build>
 
 </project>

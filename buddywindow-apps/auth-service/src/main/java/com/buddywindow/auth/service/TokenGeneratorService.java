@@ -11,14 +11,16 @@ import com.buddywindow.auth.constant.PrivateClaims;
 import com.buddywindow.auth.entity.TokenUserProfile;
 import com.buddywindow.auth.util.JsonUtil;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureException;
 import io.jsonwebtoken.UnsupportedJwtException;
 
 @Service
-public class TokenGeneratorService {
+public class TokenGeneratorService implements ITokenGeneratorService{
 
 	@Value("${buddywindow.app.access-token-secret}")
 	private String accessTokenSecret;
@@ -29,12 +31,14 @@ public class TokenGeneratorService {
 	@Value("${buddywindow.app.refresh-token-expirationMs}")
 	private int refershTokenExpirationMs;
 
+	@Override
 	public String generateAccessTokenFormUsername(String username, TokenUserProfile profiles) {
 		Map<String, Object> claims = getClaimsFromUserProfile(profiles);
 		return TokenBuilder.getInstance().setClaims(claims).setSubject(username).setSecretKey(accessTokenSecret)
 				.setTokenExpirationMs(accessTokenExpirationMs).build();
 	}
 
+	@Override
 	public String generateRefreshTokenFormUsername(String username, TokenUserProfile profiles) {
 		Map<String, Object> claims = getClaimsFromUserProfile(profiles);
 		return TokenBuilder.getInstance().setClaims(claims).setSubject(username).setSecretKey(refreshTokenSecret)
@@ -42,26 +46,37 @@ public class TokenGeneratorService {
 
 	}
 
+	@Override
 	public String getUserNameFromAccessToken(String token) {
 		return Jwts.parser().setSigningKey(accessTokenSecret).parseClaimsJws(token).getBody().getSubject();
 	}
 
-	public boolean validateJwtToken(String authToken) {
+	@Override
+	public boolean validateToken(final String authToken) {
+		return this.validateJwtToken(authToken);
+	}
+	
+	
+	private boolean validateJwtToken(String authToken) {
 		try {
-			Jwts.parser().setSigningKey(accessTokenSecret).parseClaimsJws(authToken);
+			Jws<Claims> claims = Jwts.parser().setSigningKey(accessTokenSecret).parseClaimsJws(authToken);
 			return true;
 		} catch (SignatureException e) {
+			System.out.println("Error :: "+e);
 //	      logger.error("Invalid JWT signature: {}", e.getMessage());
 		} catch (MalformedJwtException e) {
+			System.out.println("Error :: "+e);
 //	      logger.error("Invalid JWT token: {}", e.getMessage());
 		} catch (ExpiredJwtException e) {
+			System.out.println("Error :: "+e);
 //	      logger.error("JWT token is expired: {}", e.getMessage());
 		} catch (UnsupportedJwtException e) {
+			System.out.println("Error :: "+e);
 //	      logger.error("JWT token is unsupported: {}", e.getMessage());
 		} catch (IllegalArgumentException e) {
+			System.out.println("Error :: "+e);
 //	      logger.error("JWT claims string is empty: {}", e.getMessage());
 		}
-
 		return false;
 	}
 

@@ -46,7 +46,7 @@ public class TokenBuilder {
 		.setClaims(this.claims)
         .setSubject(this.subject)
         .setIssuedAt(new Date(System.currentTimeMillis()))
-        .setExpiration(new Date(System.currentTimeMillis() + this.tokenExpirationMs * 1000))
+        .setExpiration(new Date(System.currentTimeMillis() + this.tokenExpirationMs))
         .signWith(SignatureAlgorithm.HS512, this.secretKey)
         .compact();
 	}

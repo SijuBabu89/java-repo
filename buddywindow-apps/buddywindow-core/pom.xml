@@ -10,22 +10,20 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.4.0</version>
 		<relativePath />
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-		<lombok.version>1.18.22</lombok.version>
+		<java.version>17</java.version>
+		<lombok.version>1.18.30</lombok.version>
 		<buddywindow-core.version>0.0.1-SNAPSHOT</buddywindow-core.version>
-		<maven-deploy-plugin.version>3.0.0-M2</maven-deploy-plugin.version>
-		<spring-boot-dependencies.version>3.2.4</spring-boot-dependencies.version>
+		<spring-boot-dependencies.version>3.4.0</spring-boot-dependencies.version>
 	</properties>
 	<modules>
+		<module>common-core</module>
 		<module>service-core</module>
 		<module>persistence-core</module>
-		<module>common-core</module>
 	</modules>
 
 	<dependencyManagement>
@@ -45,7 +43,6 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
-					<version>${maven-deploy-plugin.version}</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>

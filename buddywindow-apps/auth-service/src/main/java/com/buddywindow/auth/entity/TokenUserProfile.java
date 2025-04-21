@@ -1,11 +1,13 @@
 package com.buddywindow.auth.entity;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-//@AllArgsConstructor
+@AllArgsConstructor
 @NoArgsConstructor
 public class TokenUserProfile {
 
@@ -16,6 +18,8 @@ public class TokenUserProfile {
 	private String firstName;
 	private String middleName;
 	private String lastName;
+	private String role;
+	private List<String> rights;
 	
 	
 	

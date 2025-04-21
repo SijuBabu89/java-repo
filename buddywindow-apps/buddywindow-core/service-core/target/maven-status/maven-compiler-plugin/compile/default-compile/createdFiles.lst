@@ -1,3 +1,6 @@
-com/buddywindow/core/service/security/SecurityConfig.class
+com/buddywindow/core/service/adapter/IAuthServiceAdapter.class
 com/buddywindow/core/service/filters/AuthTokenFilter.class
 com/buddywindow/core/service/entity/UserProfile.class
+com/buddywindow/core/service/security/SecurityConfig.class
+com/buddywindow/core/service/utils/HttpUtil.class
+com/buddywindow/core/service/adapter/AuthServiceAdapter.class
